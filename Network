@@ -1,0 +1,20 @@
+<?php
+$IS_LOCALHOST = true;
+date_default_timezone_set('Asia/Manila');
+
+@$PARENT_PAGE_PDF = "";
+if ($IS_LOCALHOST==true){$PARENT_PAGE_PDF = $_SERVER['SERVER_NAME'];}
+if ($IS_LOCALHOST==false){$PARENT_PAGE_PDF = $_SERVER['SERVER_NAME'].'/DUMMY';}
+
+@$SERVER_ADDRESS = '69.167.168.148';
+@$MySQLConnection = mysqli_connect($SERVER_ADDRESS, 'admatamayo_mpc13', 'QWERTYx123', 'admatamayo_aiiportal') or die();
+//===================================================================================================================
+// Email Credentials Settings
+@$Username = "Portal@atlantaindustriesinc.net";
+@$Password = "QWERTYx123";
+@$Server = "mail.atlantaindustriesinc.net";
+@$Port = "587";
+@$Email_From_Address = "Portal@atlantaindustriesinc.net";
+@$Email_From_Name = "AII.Net - Portal";
+
+
